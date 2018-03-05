@@ -32,9 +32,6 @@ class CashRegister
     end
   end
 
-  def items
-    @@all << items
-  end
 
   def void_last_transaction
     @total = @total - @quantity * @price
