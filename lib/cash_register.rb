@@ -33,7 +33,7 @@ class CashRegister
   end
 
   def items
-    @@all << self.title * @quantity
+    @@all << items
   end
 
   def void_last_transaction
