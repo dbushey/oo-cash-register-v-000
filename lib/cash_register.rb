@@ -1,6 +1,8 @@
 class CashRegister
   attr_accessor :total, :discount, :title, :price, :quantity, :items
 
+  @items = []
+
   def initialize(discount = 0)
     @total = 0
     @discount = discount
@@ -11,7 +13,6 @@ class CashRegister
     @price = price
     @quantity = quantity
     @total = @total + @quantity * @price
-    @items = []
     @quantity.times do
       @items << @title
     end
