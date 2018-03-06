@@ -7,9 +7,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @quantity.times do
-      @items << @title
-    end
+    @title = title
     @price = price
     @quantity = quantity
     @total = @total + @quantity * @price
@@ -21,6 +19,12 @@ class CashRegister
     else
       @total = @total - (@total * @discount/100)
       return "After the discount, the total comes to $#{total}."
+    end
+  end
+
+  def items
+    @quantity.times do
+      @items << @title
     end
   end
 
