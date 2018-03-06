@@ -11,6 +11,10 @@ class CashRegister
     @price = price
     @quantity = quantity
     @total = @total + @quantity * @price
+    @items = []
+    @quantity.times do
+      @items << @title
+    end
   end
 
   def apply_discount
@@ -19,13 +23,6 @@ class CashRegister
     else
       @total = @total - (@total * @discount/100)
       return "After the discount, the total comes to $#{total}."
-    end
-  end
-
-  def items
-    @items = []
-    @quantity.times do
-      @items << @title
     end
   end
 
