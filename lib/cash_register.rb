@@ -23,6 +23,7 @@ class CashRegister
   end
 
   def items
+    @items = []
     @quantity.times do
       @items << @title
     end
